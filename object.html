@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>hello object</h1>
+    <script>
+        // //1.object literal
+        // let obj={name:'utsav' , add:'delhi'}
+        // //2.object instances
+        // let obj2= new Object()
+        // obj2.name="vicky"
+        // //3.constructor way
+        // function student ()
+        // {
+        //    this.name="utsav"
+        // }
+        // let str1=  new student()
+
+      
+       let   obj={
+        name:'utsav',
+        add:'delhi',
+        age:25,
+        isPrime()
+        {
+            console.log('i am prime')
+        },
+        hobbies:null
+       }
+                 //object.seal()
+        let result=Object.seal(obj)
+        result.name="vicky"
+        result.sal=2222
+        delete result.age
+        console.log(obj)         
+
+
+        //       //Object.freeze()
+        // let result=Object.freeze(obj) 
+        // result.name="vicky"
+        // delete result.add
+        // result.sal=3000
+        // console.log(result)     
+
+
+                  //Object.assign()
+    //    let result=Object.assign({},obj)  
+    //    console.log(result)         
+
+
+              //Object.entries()
+        // let result=Object.entries(obj)
+        // console.log(result)      
+
+               //Object.value
+        //  let result=Object.values(obj)
+        //  console.log(result)
+
+                //object.keys()
+        // let result=Object.keys(obj)
+        // console.log(result)
+
+              //create method()
+    //it create new object
+    //    let obj2=Object.create(obj)
+    //    console.log(obj2)
+    //    console.log(obj2==obj)
+    //    obj2.name="vicky"
+    //    console.log(obj.name)
+    //    console.log(obj2.name)
+
+
+        
+    </script>
+</body>
+
+</html>
