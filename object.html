@@ -24,22 +24,22 @@
         // let str1=  new student()
 
       
-       let   obj={
-        name:'utsav',
-        add:'delhi',
-        age:25,
-        isPrime()
-        {
-            console.log('i am prime')
-        },
-        hobbies:null
-       }
-                 //object.seal()
-        let result=Object.seal(obj)
-        result.name="vicky"
-        result.sal=2222
-        delete result.age
-        console.log(obj)         
+    //    let   obj={
+    //     name:'utsav',
+    //     add:'delhi',
+    //     age:25,
+    //     isPrime()
+    //     {
+    //         console.log('i am prime')
+    //     },
+    //     hobbies:null
+    //    }
+    //              //object.seal()
+    //     let result=Object.seal(obj)
+    //     result.name="vicky"
+        // result.sal=2222
+        // delete result.age
+        // console.log(obj)         
 
 
         //       //Object.freeze()
@@ -76,7 +76,55 @@
     //    console.log(obj.name)
     //    console.log(obj2.name)
 
+    let data= {
+        a:"utsav",
+        b:"vicky",
+        c:'arvind',
+        d:'utsav'
+    }
 
+    let value=Object.values(data)
+    let dataset={}
+    for (let data of value)
+    {
+        if(dataset[data])
+        {
+          dataset[data]++
+        }
+        else{
+            dataset[data]=1
+        }
+    }
+ 
+ let x= Object.entries(dataset)
+  let result=[]
+  //1.duplicate data
+//    for (let [value,count] of x )
+//    {
+//      if(count>1)
+//      {
+//        result.push(value)
+//      }
+//    }
+//2.unique
+// for (let [value,count] of x )
+//    {
+//      if(!(count>1))
+//      {
+//        result.push(value)
+//      }
+//    }
+
+//3.duplicate with count
+for (let [value,count] of x )
+   {
+     if(count>1)
+     {
+        let x=count+value
+       result.push(x)
+     }
+   }
+   console.log(result)
         
     </script>
 </body>
