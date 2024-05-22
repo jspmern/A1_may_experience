@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>rest opr...</h1>
+        <script>
+                  //rest opr....
+             //it is denoted by 3 dot
+             //capturing the array
+             //deltion without effecting on actual array
+             //it must have to last
+        //      let arr=[1,2,3,4,5,8,6,7]
+              
+        //      let [a,,...rest]=arr
+        //      console.log(rest)
+
+
+        //  function print(...rest)
+        //  {
+        //      console.log(rest)
+        //  }
+        //  print(...arr)
+
+
+        //difference between argument and rest
+
+
+    let  print=function(...rest)
+        {
+           console.log(arguments)
+           rest.map((item)=>{
+            console.log(item)
+           })
+        }
+        let arr=[1,2,3,4,5,8,6,7]
+        print(...arr)
+
+
+        </script>
+</body>
+</html>

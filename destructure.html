@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>destructure</h1>
+    <p>unpacking and binding with varible is called destructure</p>
+    <script>
+        //object
+        // let obj={
+        //     name:'utsav',
+        //     add:'delhi',
+        //     hobbies:{
+        //         ch:'nothing',
+        //         ph:{
+        //             lth:'earning money',
+        //             sth:"gaining exp"
+        //         }
+        //     }
+        // }
+
+        //default
+        // let {name,add,hobbies:{ch,ph,th="hello"}}=obj
+        // console.log(th)
+
+        // console.log(obj.name)
+        // console.log(obj.hobbies.ch)
+        //  let {hobbies}=obj
+        //nested destructure
+        // let {name,add,hobbies:{ch,ph}}=obj
+        //    let {name,hobbies:{ch,ph:{lth,sth}}} =obj
+        //alias
+        //    let {name:fullName,}=obj
+        //   console.log(fullName,abc)
+
+        //************************************Array********************************
+        // let arr=[1,2,3,4,5,6]
+        // //skiping
+        // let [a,,,d]=arr
+        //nested
+        // let arr=[1,2,3,4,[5,'utsav',['ram','x',['hello','how']]],6]
+        // console.log(arr[4][2][2][1])
+        // let [,,,,[,,[,,[a,b,c="utsav"]]]]=arr
+        // console.log(c)
+
+        //mixing
+        // let data = {
+        //     name: 'utsav', add: {
+        //         pa: 'delhi',
+        //         ca: [{ lastyear: 'spice gardern', now: ['a', 1234, { galino: 4, postoffice: 'marathalli' }] }]
+        //     }
+        // }
+        // let{add:{ca:[{now:[,,{postoffice}]}]}} =data
+        // console.log(postoffice)
+        // console.log(data.add.ca[0].now[2].postoffice)
+
+    </script>
+</body>
+
+</html>
