@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>spread opr..</h1>
+       <script>
+                     //array
+        //1.by using this  you can do combine one and more array
+        // let arr=[1,2,3]
+        // let arr2=[4,5,6,7]
+        // let arr3=[678,9,2]
+        // let result=[...arr,...arr2,...arr3,'utsav']
+        // console.log(result)
+
+
+        //2.for new ref you can use spread opr (it make deep copy for only 1-depth)
+        // let arr=[1,2,3,4,[8,9]]
+        //  let arr2=[...arr]
+        //  arr2[4][1]="urtsav"
+        //  console.log(arr,arr2)
+
+       //3.function arguments 
+    //    let product=[1,2,3,4,5]
+    //    function print(...arg)
+    //    {
+    //      for(let x in arg)
+    //      {
+    //         console.log(x)
+    //      }
+    //    } 
+    //    print(...product)
+
+ //***************************object *****************************
+
+ let obj={
+    name:'utsav',
+    add:'delhi',
+    age:25
+ }
+ let obj2={
+    hobbies:"playing cricket",
+    name:'vicky'
+ }
+ //1.new ref
+// let obj2={...obj}
+//2.combine object
+// let result={...obj,...obj2}
+// console.log(result)
+
+           //stirng
+//  let str="utsav"
+//  let result=[...str]
+//  let result2={...str}
+//  console.log(result,result2)
+     
+       //mixing
+
+// let arr=[1,2,3,4]
+// let obj7={...arr}
+// let result=[...obj7]
+// console.log(result)  //not possible
+// console.log(obj7)       
+ 
+       </script>
+</body>
+</html>
