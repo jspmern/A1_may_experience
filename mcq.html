@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>mcq</h1>
+      <script>
+//    oprator, converstion , coreshion ,  
+        console.log(9+8)  //17
+        console.log("9"+8+7+6+5) //98765
+        console.log("9"+undefined) //9undefined
+        console.log(undefined+"9") //undefined9
+        console.log(9+undefined)   //NaN
+        console.log("2"*3)    //6
+        console.log("23"*"23")   //529
+        console.log(true+true+true)   //3
+        console.log(7*false)   //0
+        console.log(7 * undefined)   //NaN
+        console.log(undefined+undefined) //NaN
+        console.log("2"*(true+true))     //4
+        console.log(null+null)          //0
+        console.log(NaN+NaN)             //NaN
+        console.log("5"+NaN)            //5NaN
+        console.log("5"*NaN)            //NaN
+        console.log({}=={})            //false
+        let obj={
+            name:"utsav"
+        }
+        let obj3=obj
+        let obj2={
+            name:"utsav"
+        }
+        console.log(obj==obj2)  //false
+        console.log(obj==obj3)   //true
+        console.log([]==[])
+        let arr=['4','2','3']
+         let x=arr.sort()
+         console.log(x===arr)
+
+         let arr3=[1,2,3,4]
+         let arr4=['utsav','2','3','4']
+         console.log(arr3[1]===arr4[1])  //false
+         console.log("5"==5=="3")   //false
+         console.log("5"==="5"===1)   //false
+
+         let a=b=c=3
+         console.log(a) //3
+         console.log(b) //3
+         console.log(c)  //3
+
+         console.log(7>5>4)   //false
+         console.log(2 ||0 &&3)   //2
+         console.log(3 && 0 && 67)  //0
+         console.log(3 &&         0 || 5)    //5
+         console.log(2 + +'2')    //4 (casting is happening +'2' convert into number 2)
+
+
+
+
+
+
+      </script> 
+</body>
+</html>
