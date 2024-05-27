@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>shallow copy and deep copy</h1>
+        <script>
+            // let obj2={
+            //     name:'utsav',
+            //     add:'delhi'
+            // }
+            //assign (shallow copy)
+        //     let obj3=obj2
+        //   obj3.name="vicky"
+        //   console.log(obj2.name)
+        //   console.log(obj3.name)
+        //deep copy
+       // let result=''
+                 //object.assign()
+        // result=Object.assign({},obj2)
+        // result.name="vicky"
+        // console.log(result==obj2)
+        // console.log(result.name)
+        // console.log(obj2.name)
+                 //spread opr
+    //     result={...obj2}
+    //    result.name="vicky"
+    //     console.log(result==obj2)
+    //     console.log(result.name)
+    //     console.log(obj2.name)  
+    
+    //               //json
+    // result=JSON.parse(JSON.stringify(obj2))
+    //  result.name="vicky"
+    //     console.log(result==obj2)
+    //     console.log(result.name)
+    //     console.log(obj2.name)
+
+    let obj={
+        name:"utsav",
+        add:{
+            ca:"delhi",
+            pa:"america"
+        }
+    }
+     
+    // result=Object.assign({},obj)
+    // console.log(result==obj)
+    // result.add.pa="jaiput"
+    // console.log(result.add.pa)
+    // console.log(obj.add.pa)
+    // result=JSON.parse(JSON.stringify(obj))
+    // obj.add.pa="delhi2"
+    // console.table(obj)
+    // console.table(result)
+
+    let result={...obj,add:{...obj.add}}
+    result.add.pa="usa"
+     console.table(obj)
+    console.table(result)
+        </script>
+</body>
+</html>
