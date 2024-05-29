@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>async and await </h1>
+    <script>
+        // function Calculator(no)
+        // {
+        //     return new Promise((res,rej)=>{
+        //           res(no +10)
+        //     })
+        // }
+        // Calculator(20)
+        // .then((item)=>{
+        //       console.log('1',item)
+        //       return Calculator(item)
+
+        // }).then((item)=>{
+        //     console.log('2',item)
+        //     return Calculator(item)
+        // })
+        // .then((item)=>{
+        //     console.log('3',item)
+        // })
+        // .catch((err)=>{
+        //     console.log(err)
+        // })
+
+        ///async and await is come with pair async you must have to use only before function
+        console.log('1')
+        function Calculator(no) {
+            return new Promise((res, rej) => {
+                let no = Math.trunc(Math.random() * 10)
+                if (no > 5) {
+                    setTimeout(() => { res(no + 10) }, 5000)
+                }
+                else {
+                    rej(new Error('somthing wrong'))
+                }
+
+            })
+        }
+        async function print() {
+            try {
+                let x = await Calculator(20)
+                console.log('1', x)
+                return Calculator(x)
+            } catch (error) {
+                console.log(error.message)
+            }
+        }
+        async function print2() {
+            try {
+                let y = await print()
+                console.log('2', y)
+            } catch (error) {
+                console.log(error.message)
+            }
+        }
+        print2()
+        console.log('end')
+
+
+    </script>
+</body>
+
+</html>

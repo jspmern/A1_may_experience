@@ -39,13 +39,13 @@
     //     console.log(result.name)
     //     console.log(obj2.name)
 
-    let obj={
-        name:"utsav",
-        add:{
-            ca:"delhi",
-            pa:"america"
-        }
-    }
+    // let obj={
+    //     name:"utsav",
+    //     add:{
+    //         ca:"delhi",
+    //         pa:"america"
+    //     }
+    // }
      
     // result=Object.assign({},obj)
     // console.log(result==obj)
@@ -57,10 +57,35 @@
     // console.table(obj)
     // console.table(result)
 
-    let result={...obj,add:{...obj.add}}
-    result.add.pa="usa"
-     console.table(obj)
-    console.table(result)
+    // let result={...obj,add:{...obj.add}}
+    // result.add.pa="usa"
+    //  console.table(obj)
+    // console.table(result)
+    let obj=[2,{
+        name:'utsav',
+        add:{
+            ca:'hello',
+            pa:'abc'
+        }
+    }]
+    function shallow(arg)
+    {
+       for (let x in arg)
+       {
+          if(Array.isArray(arr[x]))
+          {
+              
+          }
+          else if (typeof arr[x]=="object")
+          {
+
+          }
+          else{
+
+          }
+       }
+    }
+    shallow(obj)
         </script>
 </body>
 </html>
