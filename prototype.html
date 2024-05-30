@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>prototype</h1>
+       <script>
+    //    let obj={
+    //     name:"utsav",
+    //     add:"delhi"
+    //    }
+    //    let obj2={
+    //     name:"vicky",
+    //     add:"odisha",
+    //     print(){},
+    //     gender:"male"
+    //    }
+    //    obj.__proto__.lengthFinder=function()
+    //    {
+    //      let result=Object.keys(this)
+    //      return  result.length
+    //    }
+       
+    //   let x= obj.lengthFinder()
+    //   console.log(x)
+    //    let y=obj2.lengthFinder()
+    //    console.log(y)
+
+ //__proto__ vs prototype
+    // let obj={
+    //     name:"utsav"
+    // }
+    // console.log(obj.__proto__)
+    // console.log(Object.prototype)
+    // console.log(obj.__proto__==Object.prototype)
+
+    // function student()
+    // {
+
+    // }
+    // let x=new student()
+    // console.log(student.prototype==x.__proto__)
+   
+    //  let obj1={
+    //     name:"utsav",
+    //     add:"delhi"
+    //  }
+    //  let obj2={
+    //     name:"vicky",
+    //     add:"odshia",
+    //     details()
+    //     {
+    //         console.log(`my name is ${this.name} and add is ; ${this.add}`)
+    //     }
+    //  }
+     //1.way
+    //  obj1.__proto__=obj2
+    //  console.log(obj1.__proto__==obj2)
+    //  obj1.details()
+    
+    //2.way (still pending)
+//    let x= Object.create({},obj)
+//    console.log(x)
+
+//3.
+// Object.setPrototypeOf(obj1,obj2)
+// console.log(obj1)
+
+   //**********************prtotype in constructor*************************
+   function Person()
+   {
+    this.name="utsav",
+    this.age=25
+   }
+   let p1=new Person()
+   let p2=new Person()
+  console.log(Person.prototype.__proto__.__proto__)
+  console.log(p1.__proto__==Person.prototype)
+  Person.prototype.__proto__.isPrime=function()
+  {
+    console.log('experiment done')
+  }
+  console.log(p2.__proto__.__proto__)
+
+
+
+       </script>
+</body>
+</html>
