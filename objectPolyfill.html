@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>object polyfill</h1>
+       <script>
+        //  function print(a,b,c,d)
+        //  {
+        //     console.log(`${this.name} and ${this.add}`,a,b,c,d)
+        //  }
+        //  let obj={
+        //     name:"utsav",
+        //     add:"delhi"
+        //  }
+
+        //your own  call method (call polyfill)
+        // Function.prototype.mycall=function(obj={},...rest)
+        // {
+        //     obj.fun=this
+        //     obj.fun(...rest)
+             
+        // }
+        // // print.mycall(obj,1,2,3,4)
+        // function details(a,b,c,d)
+        // {
+        //     console.log(`my name is ${this.name} and i am from ${this.add} and my sal is :${a+b+c+d}`)
+        // }
+        // details.mycall(obj,67,45,67,89)
+    //  let obj={
+    //     name:'utsav',
+    //     add:'delhi'
+    //  }
+    //  function print(a,b,c,d)
+    //  {
+    //     console.log(this.add,a,b,c,d)
+    //  }
+    // Function.prototype.mycall=function(arg={},...rest)
+    // {
+    //     if(typeof arg !='object')
+    //     {
+    //         arg={}
+    //     }
+    //     else{
+    //         arg.fun=this,
+    //         arg.fun(...rest)
+    //     }
+    // }
+    // print.mycall(obj,2,3,4,5)
+
+
+    let obj={
+        name:"utsav",
+        add:'delhi'
+    }
+    function print()
+    {
+        console.log(`${this.name} and ${this.add}`)
+    }
+    // print.apply(obj,[2,32,4,5])
+             //custom apply method
+    // Function.prototype.myapply=function(obj={},arr=[])
+    // {
+    //     if(!Array.isArray(arr)) throw new Error('CreateListFromArrayLike called on non-object')
+    //     obj.fun=this
+    //     obj.fun(...arr)
+    // }
+    // print.myapply(obj,[2])
+            //custom bind method
+
+    Function.prototype.mybind=function(obj={},...arg)
+    {
+       obj.fun=this;
+       return function()
+       {   
+          obj.fun(...arg)
+       }
+    }        
+    // let x=print.bind(obj)
+    // x()    
+    let x=print.mybind(obj) 
+    x()   
+       </script>
+</body>
+</html>
