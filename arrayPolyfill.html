@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>array polyfill</h1>
+       <script>
+        let arr=[1,2,3,4,5,6,7]
+                     //forEach polyfill
+        // arr.forEach((item,i,arr)=>{
+        //      console.log(item,i,arr)
+        // })
+        // Array.prototype.myforEach=function(arg)
+        // { 
+        //     for(let i=0;i<this.length;i++)
+        //     {
+        //          arg(this[i],i,this)
+        //     }
+        // }
+        // arr.myforEach((item,i,arr)=>{
+        //     console.log(item,i,arr)
+        // })
+                //map()
+
+//     Array.prototype.mymap=function(cb)
+//     {
+//          let newarr=[]
+//          for(let i=0;i<this.length;i++)
+//          {
+//             newarr.push(cb(this[i]))  
+//          }
+//          return newarr
+        
+//     } 
+//   let x=  arr.mymap((item)=>{
+//         if(item>3) return item
+//     })  
+//     console.log(x) 
+
+
+      //filter
+
+
+   Array.prototype.myfilter=function(cb)
+   {
+    let newArray=[]
+     for(let i=0 ;i<this.length;i++)
+     {
+           if(cb(this[i],i,this))
+           {
+            newArray.push(this[i])
+           }
+           
+     }
+     return newArray
+   }   
+    let z=  arr.myfilter((item,i,arr)=>{
+        console.log(item,i,arr)
+        return item>3
+      })
+      console.log(z)
+
+
+       </script>
+</body>
+</html>
