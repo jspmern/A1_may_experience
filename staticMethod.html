@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>static method in js</h1>
+       <script>
+        class Student{
+            constructor(name,add,age)
+            {
+                this.name=name
+                this.add=add
+                this.age=age
+                console.log('constructor')
+            }
+           
+           static printDetails2(a)
+            {
+                console.log(`my name is utsav ${a}`)
+            }
+            static printDetails3()
+            {
+                console.log('hello i am printDetails3')
+            }
+            static printDetails2(a)
+            {
+                console.log(`my name is utsav 2 ${a}`)
+            }
+
+        }
+       // let stu1=new Student('utsav','delhi',25)
+        //stu1.printDetails()
+        Student.printDetails2('hello')
+        Student.printDetails3()
+       </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>inheritance</h1>
+    <script>
+        class Student{
+           constructor(name,age)
+           {
+            this.name=name
+            this.age=age
+           }
+           printDetails()
+           {
+            console.log(`hello my name is ${this.name} and ${this.age}`)
+           }
+        }   
+        class Teacher extends Student
+        {
+              constructor(name,age,add)
+              {
+                super(name,age)
+                this.add=add
+              }
+        } 
+        class Testing extends Teacher{
+
+        } 
+        let teacher1=new Teacher("utsav",25,"delhi")
+        console.log(teacher1)
+        teacher1.printDetails()
+        let testing1=new Testing('utsav')
+        console.log(testing1)
+    </script>
+</body>
+</html>
